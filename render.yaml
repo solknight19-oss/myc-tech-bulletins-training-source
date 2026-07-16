@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: myc-tech-bulletins-training-source
+    runtime: static
+    plan: free
+    buildCommand: echo "Static site ready"
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
